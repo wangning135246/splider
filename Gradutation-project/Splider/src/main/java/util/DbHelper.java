@@ -12,9 +12,9 @@ import java.util.List;
  */
 public class DbHelper {
     public static final String driver_class = "com.mysql.jdbc.Driver";
-    public static final String driver_url = "jdbc:mysql://127.0.0.1/test?useunicode=true&characterEncoding=utf8";
+    public static final String driver_url = "jdbc:mysql://localhost/test?useunicode=true&characterEncoding=utf8";
     public static final String user = "root";
-    public static final String password ="";
+    public static final String password ="root";
     private static Connection conn = null;
     private PreparedStatement pst = null;
     private ResultSet rst = null;
@@ -44,7 +44,7 @@ public class DbHelper {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            System.out.println("连接数据库成功");
+            System.err.println("连接数据库成功");
         }
         return conn;
     }

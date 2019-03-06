@@ -11,6 +11,4 @@ import java.util.List;
 public interface EduInfoDao {
     public int saveUser(EduInfo eduInfo);
 
-    public List<EduInfo> selectWords() throws Exception;
-
 }
